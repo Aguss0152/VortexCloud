@@ -149,7 +149,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const instagram = document.getElementById('instagram');
     const facebook = document.getElementById('facebook');
-    const github = document.getElementById('github'); // Agregamos GitHub para completar la lista
     const studiotresd = document.getElementById('studiotresd'); 
     const aromabakery = document.getElementById('aromabakery');
 
@@ -162,12 +161,6 @@ document.addEventListener('DOMContentLoaded', () => {
     if (facebook) {
         facebook.addEventListener('click', () => {
             window.open('https://www.facebook.com/share/1NsC2pTmVe/', '_blank');
-        });
-    }
-    if (github) {
-        // Asumiendo que quieres que GitHub abra en nueva pestaña
-        github.addEventListener('click', () => {
-            window.open('https://github.com/TuUsuarioDeGitHub', '_blank'); 
         });
     }
     // Proyecto Studio 3D
