@@ -160,7 +160,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     if (facebook) {
         facebook.addEventListener('click', () => {
-            window.open('https://www.facebook.com/share/1NsC2pTmVe/', '_blank');
+            window.open('https://www.facebook.com/share/1MzpSmfHL9/', '_blank');
         });
     }
     // Proyecto Studio 3D
