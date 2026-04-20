@@ -1,0 +1,688 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+body{
+    background: black;
+    color: white;
+    width: 100%;
+    height: 90vh;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-appearance: none !important;
+    appearance: none !important;
+}
+
+span {
+    color: red;
+    text-shadow: 0px 0px 20px red;
+}
+
+.logo{
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+.navegador {
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    align-items: center;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(5px);
+    height: auto;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: red;
+  border-bottom: 2px solid red;
+  text-shadow: 0px 0px 20px red;
+}
+
+.inicio {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    padding: 1rem;
+    width: 100%;
+    height: auto;
+}
+
+header button{
+    padding: 10px;
+    border: 2px solid white;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: color 0.4s all;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease-in-out;
+    margin-right: 15px;
+    color: black;
+}
+
+header button:hover{
+    transform: scale(1.050);
+    background-color: black;
+    color: white;
+}
+
+.inicio-text {
+    width: 100%;
+}
+
+.imagen-header{
+    width: 180%;
+}
+
+/* ========================================================== */
+/* 1. BASE Y CONFIGURACIÓN GENERAL */
+/* ========================================================== */
+:root {
+    /* Paleta de Colores de VortexCloud */
+    --color-primary: #FF0000; /* Naranja/Rojo de acento */
+    --color-secondary: #FF0000; /* Azul de acción/botones */
+    --color-text: white;
+    --color-background: black;
+}
+
+.cta-button-primary, 
+.cta-button-secondary {
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-weight: bold;
+    text-align: center;
+    transition: all 0.3s;
+    display: inline-block;
+}
+
+.cta-button-primary {
+    background-color: var(--color-primary);
+    color: white;
+    border: 2px solid var(--color-primary);
+}
+
+.cta-button-primary:hover {
+    background-color: red;
+}
+
+.cta-button-secondary {
+    background-color: transparent;
+    color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+    margin-left: 15px;
+}
+
+.cta-button-secondary:hover {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+
+/* ========================================================== */
+/* 4. SECCIÓN DE SERVICIOS (PLANES DE PRECIOS) */
+/* ========================================================== */
+
+.importante {
+    margin-bottom: 20px;
+    color: red;
+    text-shadow: 0px 0px 20px red;
+}
+.services-section {
+    padding: 80px 20px;
+    text-align: center;
+    margin: 0px;
+    background-color: var(--color-background);
+}
+
+.services-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.services-section .subtitle {
+    margin-bottom: 10px;
+    color: white;
+}
+
+/* --- GRILLA DE PRECIOS --- */
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- TARJETA INDIVIDUAL --- */
+.service-card {
+    background-color: #191919;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.service-icon {
+    font-size: 3em;
+    color: var(--color-primary); 
+    margin-bottom: 15px;
+}
+
+.plan-subtitle {
+    font-style: italic;
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 25px;
+    font-size: 0.9em;
+}
+
+/* --- LISTA DE CARACTERÍSTICAS --- */
+.features-list {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    margin-bottom: 25px;
+    width: 100%;
+}
+
+.features-list li {
+    padding: 10px 0;
+    color: #E1E1E1;
+    border-bottom: 1px dashed #eee;
+    display: flex;
+    align-items: center;
+}
+
+.features-list li i {
+    color: var(--color-secondary);
+    margin-right: 10px;
+}
+
+.features-list .disabled-feature {
+    opacity: 0.6;
+    text-decoration: line-through;
+}
+
+.features-list .disabled-feature .fa-times {
+    color: red; 
+}
+
+/* --- CAJA DE PRECIO --- */
+.price-box {
+    margin-top: 20px;
+    padding: 10px 0;
+    flex-grow: 1; /* Permite que el precio empuje el botón hacia abajo */
+}
+
+.starting-price {
+    margin: 0;
+    color: #E1E1E1;
+    font-size: 0.9em;
+}
+
+.final-price {
+    font-size: 2.2em;
+    font-weight: bold;
+    color: var(--color-primary);
+    margin: 5px 0 15px;
+}
+
+.cta-service-btn {
+    text-decoration: none;
+    background-color: var(--color-secondary); 
+    color: white;
+    padding: 12px 25px;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    margin-top: 20px; /* Separación del precio */
+}
+
+.cta-service-btn:hover {
+    background-color: #005f8c;
+}
+
+/* --- ESTILO DE TARJETA RECOMENDADA --- */
+.recommended-card {
+    border: 3px solid var(--color-primary); 
+    box-shadow: 0 8px 25px rgba(255, 69, 0, 0.2); 
+    transform: scale(1.05); 
+    z-index: 10;
+}
+
+.recommended-card h3 {
+    position: relative;
+    padding-top: 40px;
+}
+
+.recommended-card h3::before {
+    box-shadow: 2px 2px 2px black;
+    content: "MÁS POPULAR";
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%) rotate(-3deg);
+    background-color: var(--color-primary);
+    color: white;
+    padding: 4px 10px;
+    font-size: 0.7em;
+    border-radius: 5px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+
+.imagen-header img{
+    width: 90%;
+    height: auto;
+    filter: drop-shadow(0px 0px 20px red);
+}
+
+.wrapper {
+  display: inline-flex;
+  list-style: none;
+  font-family: "Poppins", sans-serif;
+  justify-content: center;
+}
+
+.wrapper .icon {
+  color: black;
+  position: relative;
+  background: white;
+  border-radius: 50%;
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip {
+  position: absolute;
+  top: 0;
+  font-size: 14px;
+  background: black;
+  color: black;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background: red;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .facebook:hover,
+.wrapper .facebook:hover .tooltip,
+.wrapper .facebook:hover .tooltip::before {
+  background: red;
+  color: black;
+  text-shadow: 0px 0px 20px red;
+}
+
+.wrapper .github:hover,
+.wrapper .github:hover .tooltip,
+.wrapper .github:hover .tooltip::before {
+  background: red;
+  color: black;
+  text-shadow: 0px 0px 20px red;
+}
+
+.wrapper .instagram:hover,
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip::before {
+  background: red;
+  color: black;
+  text-shadow: 0px 0px 20px red;
+}
+
+section {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.problema {
+    margin-left: 3rem;
+    margin-right: 3rem;
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.problema img {
+    width: 100%;
+}
+
+.solucion {
+    text-align: end;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.solucion img{
+    width: 100%;
+}
+
+.problema-solucion {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.servicios {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contenido-servicios, .div-proyectos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.servicio-1, .servicio-2, .servicio-3{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    gap: 60px;
+    align-items: center;
+    text-align: center;
+    border: 2px solid white;
+    border-radius: 15px;
+    background-color: rgb(150, 1, 1);
+    padding: 1rem;
+    margin-top: 30px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.servicio-1 i, .servicio-2 i, .servicio-3 i{
+    position: relative;
+    top: -35px;
+    z-index: 1000;
+    border: 2px solid white;
+    padding: 10px;
+    border-radius: 50px;
+    background-color: black;
+    color: red;
+}
+.servicio-1:hover,
+.servicio-2:hover,
+.servicio-3:hover{
+    transform: translateY(-10px);
+    box-shadow: 0px 0px 20px red;
+    background-color: brown;
+}
+
+.proyectos{
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 90px;
+}
+
+.text-proyect{
+    margin-bottom: 80px;
+}
+
+.proyecto-1, .proyecto-2{
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(5px);
+    border-radius: 15px;
+    margin: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.proyecto-1 img, .proyecto-2 img{
+    width: 200px;
+}
+
+.proyecto-1:hover,
+.proyecto-2:hover{
+    transform: scale(1.1);
+    box-shadow: 0px 0px 20px white;
+}
+
+.contact-section {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(5px);
+    padding: 20px;
+}
+
+.form-group{
+    margin: 10px;
+}
+input{
+    padding: 10px 40px;
+    border-radius: 15px;
+    border: none;
+}
+textarea {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 15px;
+    display: block;
+    text-align: center;
+    padding-top: 5px;
+    border: none;
+}
+textarea:focus,
+input:focus{
+    outline: 2px solid red;
+}
+
+form{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.contact-section button{
+    padding: 15px;
+    border: 2px solid black;
+    border-radius: 15px;
+    color: red;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+}
+
+.contact-section button:hover{
+    transform: translateY(-3px);
+    box-shadow: 0px 0px 2px red;
+    border: 2px solid red;
+    color: white;
+    background-color: black;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.burger{
+    display: none;
+}
+
+.burger.active span:nth-child(1){
+    transform: translateY(8px) rotate(45deg);
+}
+
+.burger.active span:nth-child(2){
+    opacity: 0;
+}
+
+.burger.active span:nth-child(3){
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+.burger span{
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+    transition: all 0.3s opacity 0.3s;
+}
+
+.burger button{
+    background: none;
+    border: none;
+}
+
+@media screen and (max-width: 480px){
+    .nav-links{
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: auto;
+        background-color: rgba(0, 0, 0, 0.808);
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+        gap: 20px;
+        font-size: 1rem;
+        padding: 1rem;
+        border-bottom: 2px solid white;
+    }
+
+    .nav-links.open{
+        display: flex;
+    }
+
+    .burger{
+        display: flex;
+    }
+
+    .inicio{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        font-size: 0.9rem;
+    }
+
+    .wrapper{
+        align-items: center;
+    }
+
+    .imagen-header{
+        width: calc(100%);
+    }
+
+    .problema-solucion{
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+    .problema, .solucion{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .servicios{
+        margin: 3rem;
+    }
+
+    .pricing-grid {
+        grid-template-columns: 1fr; 
+    }
+    
+    .recommended-card {
+        transform: scale(1.0); /* Evita que se salga de la pantalla al escalar */
+    }
+    
+    .services-section {
+        padding: 60px 15px;
+    }
+
+    .servicios{
+        margin: 0;
+    }
+
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem;
+    color: red;
+}
